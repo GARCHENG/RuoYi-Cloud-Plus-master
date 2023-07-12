@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.system.mapper.OffiResCategoryMapper">
+    
+    <resultMap type="OffiResCategory" id="OffiResCategoryResult">
+        <result property="resCategoryId"    column="res_category_id"    />
+        <result property="resCategoryName"    column="res_category_name"    />
+        <result property="resCategoryDescribe"    column="res_category_describe"    />
+    </resultMap>
+
+    <sql id="selectOffiResCategoryVo">
+        select res_category_id, res_category_name, res_category_describe from offi_res_category
+    </sql>
+
+    <select id="selectOffiResCategoryList" parameterType="OffiResCategory" resultMap="OffiResCategoryResult">
+        <include refid="selectOffiResCategoryVo"/>
+        <where>  
+            <if test="resCategoryName != null  and resCategoryName != ''"> and res_category_name like concat('%', #{resCategoryName}, '%')</if>
+            <if test="resCategoryDescribe != null  and resCategoryDescribe != ''"> and res_category_describe = #{resCategoryDescribe}</if>
+        </where>
+    </select>
+    
+    <select id="selectOffiResCategoryById" parameterType="Long" resultMap="OffiResCategoryResult">
+        <include refid="selectOffiResCategoryVo"/>
+        where res_category_id = #{resCategoryId}
+    </select>
+        
+    <insert id="insertOffiResCategory" parameterType="OffiResCategory" useGeneratedKeys="true" keyProperty="resCategoryId">
+        insert into offi_res_category
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="resCategoryName != null and resCategoryName != ''">res_category_name,</if>
+            <if test="resCategoryDescribe != null and resCategoryDescribe != ''">res_category_describe,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="resCategoryName != null and resCategoryName != ''">#{resCategoryName},</if>
+            <if test="resCategoryDescribe != null and resCategoryDescribe != ''">#{resCategoryDescribe},</if>
+         </trim>
+    </insert>
+
+    <update id="updateOffiResCategory" parameterType="OffiResCategory">
+        update offi_res_category
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="resCategoryName != null and resCategoryName != ''">res_category_name = #{resCategoryName},</if>
+            <if test="resCategoryDescribe != null and resCategoryDescribe != ''">res_category_describe = #{resCategoryDescribe},</if>
+        </trim>
+        where res_category_id = #{resCategoryId}
+    </update>
+
+    <delete id="deleteOffiResCategoryById" parameterType="Long">
+        delete from offi_res_category where res_category_id = #{resCategoryId}
+    </delete>
+
+    <delete id="deleteOffiResCategoryByIds" parameterType="String">
+        delete from offi_res_category where res_category_id in 
+        <foreach item="resCategoryId" collection="array" open="(" separator="," close=")">
+            #{resCategoryId}
+        </foreach>
+    </delete>
+</mapper>

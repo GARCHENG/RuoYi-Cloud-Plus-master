@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.system.mapper.OffiHomepageResMapper">
+    
+    <resultMap type="OffiHomepageRes" id="OffiHomepageResResult1">
+        <result property="id"    column="id"    />
+        <result property="resCategoryId"    column="res_category_id"    />
+        <result property="resUrl"    column="res_url"    />
+        <result property="resDescribe"    column="res_describe"    />
+        <result property="resOrder"    column="res_order"    />
+        <result property="resRoute"    column="res_route"    />
+        <result property="resStatus"    column="res_status"    />
+    </resultMap>
+
+    <sql id="selectOffiHomepageResVo">
+        select id, res_category_id, res_url, res_describe, res_order, res_route, res_status from offi_homepage_res
+    </sql>
+
+    <select id="selectOffiHomepageResList" parameterType="OffiHomepageRes" resultMap="OffiHomepageResResult1">
+        <include refid="selectOffiHomepageResVo"/>
+        <where>  
+            <if test="resCategoryId != null "> and res_category_id = #{resCategoryId}</if>
+            <if test="resUrl != null  and resUrl != ''"> and res_url = #{resUrl}</if>
+            <if test="resDescribe != null  and resDescribe != ''"> and res_describe = #{resDescribe}</if>
+            <if test="resOrder != null "> and res_order = #{resOrder}</if>
+            <if test="resRoute != null  and resRoute != ''"> and res_route = #{resRoute}</if>
+            <if test="resStatus != null "> and res_status = #{resStatus}</if>
+        </where>
+    </select>
+    
+    <select id="selectOffiHomepageResById" parameterType="Long" resultMap="OffiHomepageResResult1">
+        <include refid="selectOffiHomepageResVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertOffiHomepageRes" parameterType="OffiHomepageRes" useGeneratedKeys="true" keyProperty="id">
+        insert into offi_homepage_res
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="resCategoryId != null">res_category_id,</if>
+            <if test="resUrl != null and resUrl != ''">res_url,</if>
+            <if test="resDescribe != null and resDescribe != ''">res_describe,</if>
+            <if test="resOrder != null">res_order,</if>
+            <if test="resRoute != null and resRoute != ''">res_route,</if>
+            <if test="resStatus != null">res_status,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="resCategoryId != null">#{resCategoryId},</if>
+            <if test="resUrl != null and resUrl != ''">#{resUrl},</if>
+            <if test="resDescribe != null and resDescribe != ''">#{resDescribe},</if>
+            <if test="resOrder != null">#{resOrder},</if>
+            <if test="resRoute != null and resRoute != ''">#{resRoute},</if>
+            <if test="resStatus != null">#{resStatus},</if>
+         </trim>
+    </insert>
+
+    <update id="updateOffiHomepageRes" parameterType="OffiHomepageRes">
+        update offi_homepage_res
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="resCategoryId != null">res_category_id = #{resCategoryId},</if>
+            <if test="resUrl != null and resUrl != ''">res_url = #{resUrl},</if>
+            <if test="resDescribe != null and resDescribe != ''">res_describe = #{resDescribe},</if>
+            <if test="resOrder != null">res_order = #{resOrder},</if>
+            <if test="resRoute != null and resRoute != ''">res_route = #{resRoute},</if>
+            <if test="resStatus != null">res_status = #{resStatus},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteOffiHomepageResById" parameterType="Long">
+        delete from offi_homepage_res where id = #{id}
+    </delete>
+
+    <delete id="deleteOffiHomepageResByIds" parameterType="String">
+        delete from offi_homepage_res where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

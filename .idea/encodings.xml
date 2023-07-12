@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-api/jz-api-system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-api/jz-api-system/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-auth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-datascope/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-datascope/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-datasource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-datasource/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-log/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-log/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-redis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-security/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-swagger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-swagger/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-file/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-file/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-gen/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-gen/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-job/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-job/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-page/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-page/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-system/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-visual/jz-monitor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-visual/jz-monitor/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

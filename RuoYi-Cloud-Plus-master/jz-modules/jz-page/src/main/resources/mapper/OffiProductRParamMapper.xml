@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.system.mapper.OffiProductRParamMapper">
+    
+    <resultMap type="OffiProductRParam" id="OffiProductRParamResult">
+        <result property="id"    column="id"    />
+        <result property="productId"    column="product_id"    />
+        <result property="productParamId"    column="product_param_id"    />
+        <result property="paramOrder"    column="param_order"    />
+    </resultMap>
+
+    <sql id="selectOffiProductRParamVo">
+        select id, product_id, product_param_id, param_order from offi_product_r_param
+    </sql>
+
+    <select id="selectOffiProductRParamList" parameterType="OffiProductRParam" resultMap="OffiProductRParamResult">
+        <include refid="selectOffiProductRParamVo"/>
+        <where>  
+            <if test="productId != null "> and product_id = #{productId}</if>
+            <if test="productParamId != null "> and product_param_id = #{productParamId}</if>
+            <if test="paramOrder != null "> and param_order = #{paramOrder}</if>
+        </where>
+    </select>
+    
+    <select id="selectOffiProductRParamById" parameterType="Long" resultMap="OffiProductRParamResult">
+        <include refid="selectOffiProductRParamVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertOffiProductRParam" parameterType="OffiProductRParam" useGeneratedKeys="true" keyProperty="id">
+        insert into offi_product_r_param
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="productId != null">product_id,</if>
+            <if test="productParamId != null">product_param_id,</if>
+            <if test="paramOrder != null">param_order,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="productId != null">#{productId},</if>
+            <if test="productParamId != null">#{productParamId},</if>
+            <if test="paramOrder != null">#{paramOrder},</if>
+         </trim>
+    </insert>
+
+    <update id="updateOffiProductRParam" parameterType="OffiProductRParam">
+        update offi_product_r_param
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="productId != null">product_id = #{productId},</if>
+            <if test="productParamId != null">product_param_id = #{productParamId},</if>
+            <if test="paramOrder != null">param_order = #{paramOrder},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteOffiProductRParamById" parameterType="Long">
+        delete from offi_product_r_param where id = #{id}
+    </delete>
+
+    <delete id="deleteOffiProductRParamByIds" parameterType="String">
+        delete from offi_product_r_param where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

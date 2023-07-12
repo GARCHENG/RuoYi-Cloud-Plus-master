@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.system.mapper.OffiProductParamTypeMapper">
+    
+    <resultMap type="OffiProductParamType" id="OffiProductParamTypeResult">
+        <result property="productParamTypeId"    column="product_param_type_id"    />
+        <result property="productParamName"    column="product_param_name"    />
+    </resultMap>
+
+    <sql id="selectOffiProductParamTypeVo">
+        select product_param_type_id, product_param_name from offi_product_param_type
+    </sql>
+
+    <select id="selectOffiProductParamTypeList" parameterType="OffiProductParamType" resultMap="OffiProductParamTypeResult">
+        <include refid="selectOffiProductParamTypeVo"/>
+        <where>  
+            <if test="productParamName != null  and productParamName != ''"> and product_param_name like concat('%', #{productParamName}, '%')</if>
+        </where>
+    </select>
+    
+    <select id="selectOffiProductParamTypeById" parameterType="Long" resultMap="OffiProductParamTypeResult">
+        <include refid="selectOffiProductParamTypeVo"/>
+        where product_param_type_id = #{productParamTypeId}
+    </select>
+        
+    <insert id="insertOffiProductParamType" parameterType="OffiProductParamType" useGeneratedKeys="true" keyProperty="productParamTypeId">
+        insert into offi_product_param_type
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="productParamName != null and productParamName != ''">product_param_name,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="productParamName != null and productParamName != ''">#{productParamName},</if>
+         </trim>
+    </insert>
+
+    <update id="updateOffiProductParamType" parameterType="OffiProductParamType">
+        update offi_product_param_type
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="productParamName != null and productParamName != ''">product_param_name = #{productParamName},</if>
+        </trim>
+        where product_param_type_id = #{productParamTypeId}
+    </update>
+
+    <delete id="deleteOffiProductParamTypeById" parameterType="Long">
+        delete from offi_product_param_type where product_param_type_id = #{productParamTypeId}
+    </delete>
+
+    <delete id="deleteOffiProductParamTypeByIds" parameterType="String">
+        delete from offi_product_param_type where product_param_type_id in 
+        <foreach item="productParamTypeId" collection="array" open="(" separator="," close=")">
+            #{productParamTypeId}
+        </foreach>
+    </delete>
+</mapper>

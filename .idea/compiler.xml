@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jz-modules-gen" />
+        <module name="jz-modules-job" />
+        <module name="jz-common-security" />
+        <module name="jz-gateway" />
+        <module name="jz-common-core" />
+        <module name="jz-modules-file" />
+        <module name="jz-api-system" />
+        <module name="jz-common-log" />
+        <module name="jz-common-datascope" />
+        <module name="jz-common-datasource" />
+        <module name="jz-auth" />
+        <module name="jz-common-redis" />
+        <module name="jz-modules-page" />
+        <module name="jz-visual-monitor" />
+        <module name="jz-modules-system" />
+        <module name="jz-common-swagger" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jz" target="1.8" />
+      <module name="jz-api" target="1.8" />
+      <module name="jz-api-system" target="1.8" />
+      <module name="jz-auth" target="1.8" />
+      <module name="jz-common" target="1.8" />
+      <module name="jz-common-core" target="1.8" />
+      <module name="jz-common-datascope" target="1.8" />
+      <module name="jz-common-datasource" target="1.8" />
+      <module name="jz-common-log" target="1.8" />
+      <module name="jz-common-redis" target="1.8" />
+      <module name="jz-common-security" target="1.8" />
+      <module name="jz-common-swagger" target="1.8" />
+      <module name="jz-gateway" target="1.8" />
+      <module name="jz-modules" target="1.8" />
+      <module name="jz-modules-file" target="1.8" />
+      <module name="jz-modules-gen" target="1.8" />
+      <module name="jz-modules-job" target="1.8" />
+      <module name="jz-modules-page" target="1.8" />
+      <module name="jz-modules-system" target="1.8" />
+      <module name="jz-visual" target="1.8" />
+      <module name="jz-visual-monitor" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.system.mapper.OffiProductCategoryMapper">
+    
+    <resultMap type="OffiProductCategory" id="OffiProductCategoryResult">
+        <result property="productCategoryId"    column="product_category_id"    />
+        <result property="productName"    column="product_name"    />
+        <result property="productGroupId"    column="product_group_id"    />
+    </resultMap>
+
+    <sql id="selectOffiProductCategoryVo">
+        select product_category_id, product_name, product_group_id from offi_product_category
+    </sql>
+
+    <select id="selectOffiProductCategoryList" parameterType="OffiProductCategory" resultMap="OffiProductCategoryResult">
+        <include refid="selectOffiProductCategoryVo"/>
+        <where>  
+            <if test="productName != null  and productName != ''"> and product_name like concat('%', #{productName}, '%')</if>
+            <if test="productGroupId != null "> and product_group_id = #{productGroupId}</if>
+        </where>
+    </select>
+    
+    <select id="selectOffiProductCategoryById" parameterType="Long" resultMap="OffiProductCategoryResult">
+        <include refid="selectOffiProductCategoryVo"/>
+        where product_category_id = #{productCategoryId}
+    </select>
+        
+    <insert id="insertOffiProductCategory" parameterType="OffiProductCategory">
+        insert into offi_product_category
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="productCategoryId != null">product_category_id,</if>
+            <if test="productName != null and productName != ''">product_name,</if>
+            <if test="productGroupId != null">product_group_id,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="productCategoryId != null">#{productCategoryId},</if>
+            <if test="productName != null and productName != ''">#{productName},</if>
+            <if test="productGroupId != null">#{productGroupId},</if>
+         </trim>
+    </insert>
+
+    <update id="updateOffiProductCategory" parameterType="OffiProductCategory">
+        update offi_product_category
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="productName != null and productName != ''">product_name = #{productName},</if>
+            <if test="productGroupId != null">product_group_id = #{productGroupId},</if>
+        </trim>
+        where product_category_id = #{productCategoryId}
+    </update>
+
+    <delete id="deleteOffiProductCategoryById" parameterType="Long">
+        delete from offi_product_category where product_category_id = #{productCategoryId}
+    </delete>
+
+    <delete id="deleteOffiProductCategoryByIds" parameterType="String">
+        delete from offi_product_category where product_category_id in 
+        <foreach item="productCategoryId" collection="array" open="(" separator="," close=")">
+            #{productCategoryId}
+        </foreach>
+    </delete>
+</mapper>

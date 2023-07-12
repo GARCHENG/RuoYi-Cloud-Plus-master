@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.system.mapper.OffiProductResMapper">
+    
+    <resultMap type="OffiProductRes" id="OffiProductResResult">
+        <result property="productResId"    column="product_res_id"    />
+        <result property="resCategoryId"    column="res_category_id"    />
+        <result property="resUrl"    column="res_url"    />
+        <result property="resDescribe"    column="res_describe"    />
+        <result property="resStatus"    column="res_status"    />
+        <result property="resOrder"    column="res_order"    />
+    </resultMap>
+
+    <sql id="selectOffiProductResVo">
+        select product_res_id, res_category_id, res_url, res_describe, res_status, res_order from offi_product_res
+    </sql>
+
+    <select id="selectOffiProductResList" parameterType="OffiProductRes" resultMap="OffiProductResResult">
+        <include refid="selectOffiProductResVo"/>
+        <where>  
+            <if test="resCategoryId != null "> and res_category_id = #{resCategoryId}</if>
+            <if test="resUrl != null  and resUrl != ''"> and res_url = #{resUrl}</if>
+            <if test="resDescribe != null  and resDescribe != ''"> and res_describe = #{resDescribe}</if>
+            <if test="resStatus != null "> and res_status = #{resStatus}</if>
+            <if test="resOrder != null "> and res_order = #{resOrder}</if>
+        </where>
+    </select>
+    
+    <select id="selectOffiProductResById" parameterType="Long" resultMap="OffiProductResResult">
+        <include refid="selectOffiProductResVo"/>
+        where product_res_id = #{productResId}
+    </select>
+        
+    <insert id="insertOffiProductRes" parameterType="OffiProductRes" useGeneratedKeys="true" keyProperty="productResId">
+        insert into offi_product_res
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="resCategoryId != null">res_category_id,</if>
+            <if test="resUrl != null and resUrl != ''">res_url,</if>
+            <if test="resDescribe != null and resDescribe != ''">res_describe,</if>
+            <if test="resStatus != null">res_status,</if>
+            <if test="resOrder != null">res_order,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="resCategoryId != null">#{resCategoryId},</if>
+            <if test="resUrl != null and resUrl != ''">#{resUrl},</if>
+            <if test="resDescribe != null and resDescribe != ''">#{resDescribe},</if>
+            <if test="resStatus != null">#{resStatus},</if>
+            <if test="resOrder != null">#{resOrder},</if>
+         </trim>
+    </insert>
+
+    <update id="updateOffiProductRes" parameterType="OffiProductRes">
+        update offi_product_res
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="resCategoryId != null">res_category_id = #{resCategoryId},</if>
+            <if test="resUrl != null and resUrl != ''">res_url = #{resUrl},</if>
+            <if test="resDescribe != null and resDescribe != ''">res_describe = #{resDescribe},</if>
+            <if test="resStatus != null">res_status = #{resStatus},</if>
+            <if test="resOrder != null">res_order = #{resOrder},</if>
+        </trim>
+        where product_res_id = #{productResId}
+    </update>
+
+    <delete id="deleteOffiProductResById" parameterType="Long">
+        delete from offi_product_res where product_res_id = #{productResId}
+    </delete>
+
+    <delete id="deleteOffiProductResByIds" parameterType="String">
+        delete from offi_product_res where product_res_id in 
+        <foreach item="productResId" collection="array" open="(" separator="," close=")">
+            #{productResId}
+        </foreach>
+    </delete>
+</mapper>

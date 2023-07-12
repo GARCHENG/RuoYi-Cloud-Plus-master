@@ -1,0 +1,4 @@
+10:37:49.174 [boundedElastic-1] ERROR c.r.g.h.GatewayExceptionHandler - [handle,48] - [网关异常处理]请求路径:/auth/login,异常信息:503 SERVICE_UNAVAILABLE "Unable to find instance for ruoyi-auth"
+10:37:56.513 [boundedElastic-2] ERROR c.r.g.h.GatewayExceptionHandler - [handle,48] - [网关异常处理]请求路径:/auth/login,异常信息:503 SERVICE_UNAVAILABLE "Unable to find instance for ruoyi-auth"
+10:47:25.106 [boundedElastic-6] ERROR c.r.g.h.GatewayExceptionHandler - [handle,48] - [网关异常处理]请求路径:/auth/login,异常信息:503 SERVICE_UNAVAILABLE "Unable to find instance for ruoyi-auth"
+14:02:23.546 [boundedElastic-4] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={}, requestId='null'}, retryTimes=0,errorMessage=java.lang.InterruptedException

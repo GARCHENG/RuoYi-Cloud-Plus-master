@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/RuoYi-Cloud-Plus-master.iml" filepath="$PROJECT_DIR$/.idea/RuoYi-Cloud-Plus-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-api/jz-api.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-api/jz-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-api/jz-api-system/jz-api-system.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-api/jz-api-system/jz-api-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-auth/jz-auth.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-auth/jz-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-core/jz-common-core.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-core/jz-common-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-datascope/jz-common-datascope.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-datascope/jz-common-datascope.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-datasource/jz-common-datasource.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-datasource/jz-common-datasource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-log/jz-common-log.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-log/jz-common-log.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-redis/jz-common-redis.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-redis/jz-common-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-security/jz-common-security.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-security/jz-common-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-swagger/jz-common-swagger.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-common/jz-common-swagger/jz-common-swagger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-gateway/jz-gateway.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-gateway/jz-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-modules.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-modules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-file/jz-modules-file.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-file/jz-modules-file.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-gen/jz-modules-gen.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-gen/jz-modules-gen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-job/jz-modules-job.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-job/jz-modules-job.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-page/jz-modules-page.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-page/jz-modules-page.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-system/jz-modules-system.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-modules/jz-system/jz-modules-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-visual/jz-visual.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-visual/jz-visual.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-visual/jz-monitor/jz-visual-monitor.iml" filepath="$PROJECT_DIR$/RuoYi-Cloud-Plus-master/jz-visual/jz-monitor/jz-visual-monitor.iml" />
+    </modules>
+  </component>
+</project>
