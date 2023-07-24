@@ -13,6 +13,7 @@
         <module>jz-gen</module>
         <module>jz-job</module>
         <module>jz-file</module>
+        <module>jz-page</module>
     </modules>
 
     <artifactId>jz-modules</artifactId>
